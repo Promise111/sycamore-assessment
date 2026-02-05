@@ -18,7 +18,8 @@
     "start": "node dist/index.js",
     "dev": "ts-node-dev src/index.ts",
     "build": "tsc",
-    "db:migrate": "npx sequelize-cli db:migrate --config sequelize.config.cjs --migrations-path migrations"
+    "db:migrate": "npx sequelize-cli db:migrate --config sequelize.config.cjs --migrations-path migrations",
+    "interest:run": "ts-node-dev src/jobs/runDailyInterest.ts"
   },
   "dependencies": {
     "@types/express-validator": "^2.20.33",

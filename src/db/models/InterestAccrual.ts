@@ -4,7 +4,8 @@ import sequelize from "../index";
 export interface InterestAccrualAttributes {
   id: number;
   walletId: number;
-  date: Date;
+  // Stored as DATEONLY in the database, represented as YYYY-MM-DD string in code.
+  date: string;
   principalMinor: bigint;
   interestMinor: bigint;
   createdAt?: Date;
@@ -22,7 +23,7 @@ class InterestAccrual
 {
   declare id: number;
   declare walletId: number;
-  declare date: Date;
+  declare date: string;
   declare principalMinor: bigint;
   declare interestMinor: bigint;
   declare readonly createdAt?: Date;
