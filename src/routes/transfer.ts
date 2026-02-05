@@ -4,7 +4,7 @@ import { createTransferValidation, handleValidationErrors } from "../validators/
 
 const router = Router();
 
-router.post("/", createTransferValidation, handleValidationErrors, createTransfer);
+router.post("/", [...createTransferValidation, handleValidationErrors], createTransfer);
 
 export default router;
 
