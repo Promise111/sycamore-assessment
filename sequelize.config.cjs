@@ -6,33 +6,21 @@ const baseConfig = {
   logging: false,
 };
 
-module.exports = {
-  development: {
-    ...baseConfig,
-    url: process.env.DATABASE_URL,
-    host: process.env.DATABASE_HOST,
-    port: process.env.DATABASE_PORT ? Number(process.env.DATABASE_PORT) : 3306,
-    username: process.env.DATABASE_USERNAME,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE_NAME,
-  },
-  test: {
-    ...baseConfig,
-    url: process.env.DATABASE_URL,
-    host: process.env.DATABASE_HOST,
-    port: process.env.DATABASE_PORT ? Number(process.env.DATABASE_PORT) : 3306,
-    username: process.env.DATABASE_USERNAME,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE_NAME,
-  },
-  production: {
-    ...baseConfig,
-    url: process.env.DATABASE_URL,
-    host: process.env.DATABASE_HOST,
-    port: process.env.DATABASE_PORT ? Number(process.env.DATABASE_PORT) : 3306,
-    username: process.env.DATABASE_USERNAME,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE_NAME,
-  },
+const common = {
+  ...baseConfig,
+  username: process.env.DATABASE_USERNAME,
+  password: process.env.DATABASE_PASSWORD,
+  database: process.env.DATABASE_NAME,
+  host: process.env.DATABASE_HOST,
+  port: process.env.DATABASE_PORT ? Number(process.env.DATABASE_PORT) : 3306,
 };
+
+module.exports = {
+  development: common,
+  // support NODE_ENV=dev as used in .env
+  dev: common,
+  test: common,
+  production: common,
+};
+
 

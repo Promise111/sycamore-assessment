@@ -17,7 +17,8 @@
     "test": "jest",
     "start": "node dist/index.js",
     "dev": "ts-node-dev src/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "db:migrate": "npx sequelize-cli db:migrate --config sequelize.config.cjs --migrations-path migrations"
   },
   "dependencies": {
     "@types/express-validator": "^2.20.33",
