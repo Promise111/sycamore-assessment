@@ -87,7 +87,7 @@ Example request body:
 
 #### Example Postman request/response
 
-![Transfer endpoint via Postman](assets/sycamore-transfer.avif)
+![Transfer endpoint via Postman](assets/sycamore.avif)
 
 #### Behavior
 
