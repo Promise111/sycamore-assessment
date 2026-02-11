@@ -10,8 +10,8 @@ async function main() {
 
     await Wallet.bulkCreate(
       [
-        { userId: "alice", balanceMinor: 100_000n },
-        { userId: "bob", balanceMinor: 50_000n },
+        { userId: "yu", balanceMinor: 100_000n },
+        { userId: "mi", balanceMinor: 50_000n },
       ],
       { ignoreDuplicates: true }
     );
