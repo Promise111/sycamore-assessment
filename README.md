@@ -40,6 +40,16 @@ Run Sequelize migrations to create the tables (`Wallets`, `TransactionLogs`, `In
 npm run db:migrate
 ```
 
+### 4. Seeding example wallets
+
+For local testing, there is a small seed script that creates a few example wallets (with starting balances) in the database:
+
+```bash
+npm run seed:wallets
+```
+
+In a real system, wallets would normally be created as part of user onboarding or other business flows; for this assessment, the seed script keeps things simple and gives you known wallet IDs to use with `/transfer` and the interest job.
+
 ---
 
 ## Running the API

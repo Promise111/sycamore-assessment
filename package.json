@@ -20,7 +20,8 @@
     "build": "tsc",
     "db:migrate": "npx sequelize-cli db:migrate --config sequelize.config.cjs --migrations-path migrations",
     "interest:dev": "ts-node-dev src/jobs/runDailyInterest.ts",
-    "interest:run": "node dist/jobs/runDailyInterest.js"
+    "interest:run": "node dist/jobs/runDailyInterest.js",
+    "seed:wallets": "ts-node-dev seeders/seedWallets.ts"
   },
   "dependencies": {
     "@types/express-validator": "^2.20.33",
