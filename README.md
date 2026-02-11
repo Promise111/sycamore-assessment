@@ -48,7 +48,12 @@ For local testing, there is a small seed script that creates a few example walle
 npm run seed:wallets
 ```
 
-In a real system, wallets would normally be created as part of user onboarding or other business flows; for this assessment, the seed script keeps things simple and gives you known wallet IDs to use with `/transfer` and the interest job.
+This currently seeds:
+
+- `alice` with `100_000` minor units (e.g. 1,000.00 if you treat it as cents/kobo)
+- `bob` with `50_000` minor units (e.g. 500.00)
+
+In a real system, wallets would normally be created as part of user onboarding or other business flows; for this assessment, the seed script keeps things simple and gives you known wallets to use with `/transfer` and the interest job.
 
 ---
 
