@@ -1,2 +1,2 @@
-// Entry file that boots the HTTP server.
+// Entry file that starts up the HTTP server.
 import "./server";
